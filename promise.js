@@ -8,14 +8,16 @@ console.log(searchValue);
 
 function getValue()
 {
-searchValue='delhi';
+//searchValue='delhi';
   var searchValue=document.getElementById('searchValue').value;
   console.log(searchValue);
+  updateTemp(searchValue);
+
 
 }
 
- function updateTemp()
- { fetch('https://api.openweathermap.org/data/2.5/weather?q=' + searchValue + 'ind&units=metric&appid=1b9eec515d18cf2e35e977219ce02cc4')
+ function updateTemp(location)
+ { fetch('https://api.openweathermap.org/data/2.5/weather?q='+ location + ',ind&units=metric&appid=1b9eec515d18cf2e35e977219ce02cc4')
 .then((res)=>res.json())
  .then((data)=>{
   tempValue.innerHTML= data.main.temp;
@@ -24,8 +26,6 @@ searchValue='delhi';
   weatherDescription.innerHTML=data.weather[0].description;
 })
 }
-getValue();
-updateTemp();
 
 
 
