@@ -2,18 +2,13 @@ var tempValue=document.getElementById('tempValue');
 var minTemp=document.querySelector('.minTemp');
 var maxTemp=document.querySelector('.maxTemp');
 var weatherDescription=document.getElementById('weatherDescription')
-var weatherIcon=document.getElementById('weatherIcon')
-console.log(searchValue);
+console.log(weatherDescription.value)
 
-
-function getValue()
+function getTemp()
 {
-//searchValue='delhi';
-  var searchValue=document.getElementById('searchValue').value;
+ var searchValue=document.getElementById('searchValue').value;
   console.log(searchValue);
   updateTemp(searchValue);
-
-
 }
 
  function updateTemp(location)

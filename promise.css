@@ -1,64 +1,102 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header
-{ display: flex;
-  justify-content:space-between;  
-  color:Black;
-  padding: 1.5rem 1rem;
-}
-.myBody
-{
-    display: flex;
-    flex-direction: column;
-   align-items: center;
-   height:100vh ;
-}
-h2{
-    padding-top: 1rem ;
-    padding-bottom: 1rem;
 
-}
-.days
-{
-    display: flex;
-    flex-direction: row;
-    padding: 0.5rem 0.5rem;
-    font-size: 25px;
-    border-top:2px solid whitesmoke;
-    width: 60% ;
-    justify-content: center;
-}
-.range
-{   
+.container-1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    padding-top: 0.5rem 0.5rem;
+    background-color: #0F5474;
+    height: 95vh;
 }
-.tempBody
-{display: flex;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
-    padding-top: 0.5rem 0.5rem;
+
+h1 {
+    text-align: center;
 }
-#searchValue
-{
-    border: none;
-    width: 100%;
-    outline: none;
-    
+
+.body {
+    width: 70%;
+    height: 100vh;
+    color: black;
+    padding: 2rem 0.5rem;
+    font-family: 'Bitter', serif;
+    font-size: 200;
+    color: white;
 }
-.searchBar
-{
-width: 60%;
-display: flex;
-justify-content: space-between;
-border: 1px solid whitesmoke;
-padding: 0.5rem 0.5rem;
+
+.findBox {
+    background-color: #B0CF00;
+    color: #003B2B;
+    padding: 1.5rem 1rem;
+    padding-top: 0.5rem;
+    width: 110%;
+}
+
+#searchValue {
+    width: 70%;
+    padding: 0.2rem 1rem;
+    margin-top: 15px;
+    border: 1px solid darkgreen;
+}
+
+.searchBtn {
+    background-color: #003B2B;
+    padding: 0.2rem 0.3rem;
+    color: white;
+}
+
+footer {
+    background-color: #0F5474;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+}
+
+header {
+    background-color: #0F5474;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0.5rem;
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+#weatherIcon {
+    width: 50%;
+    margin: 1rem 1rem;
+}
+
+.tempBody {
+    display: flex;
+    background-color: #B0CF00;
+    align-items: flex-start;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 45px;
+}
+
+.range {
+    display: flex;
+    background-color: yellow;
+    align-items: flex-start;
+    font-size: 25px;
+    padding: 0.2rem 0.2rem;
+}
+
+.dayStamp {
+    margin-top: 0.5rem;
+    font-size: 30px;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid whitesmoke;
+    width: 60%;
+    text-align: center;
 }
