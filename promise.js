@@ -3,9 +3,19 @@ var minTemp=document.querySelector('.minTemp');
 var maxTemp=document.querySelector('.maxTemp');
 var weatherDescription=document.getElementById('weatherDescription')
 var weatherIcon=document.getElementById('weatherIcon')
+console.log(searchValue);
+
+
+function getValue()
+{
+searchValue='delhi';
+  var searchValue=document.getElementById('searchValue').value;
+  console.log(searchValue);
+
+}
 
  function updateTemp()
- { fetch('http://api.openweathermap.org/data/2.5/weather?id=1261481&units=metric&APPID=1b9eec515d18cf2e35e977219ce02cc4')
+ { fetch('https://api.openweathermap.org/data/2.5/weather?q=' + searchValue + 'ind&units=metric&appid=1b9eec515d18cf2e35e977219ce02cc4')
 .then((res)=>res.json())
  .then((data)=>{
   tempValue.innerHTML= data.main.temp;
@@ -14,11 +24,12 @@ var weatherIcon=document.getElementById('weatherIcon')
   weatherDescription.innerHTML=data.weather[0].description;
 })
 }
+getValue();
 updateTemp();
 
 
 
 
 
-
+//https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid
 //api.openweathermap.org/data/2.5/weather?id=1261481&APPID=1b9eec515d18cf2e35e977219ce02cc4'
