@@ -2,7 +2,7 @@ var tempValue=document.getElementById('tempValue');
 var minTemp=document.querySelector('.minTemp');
 var maxTemp=document.querySelector('.maxTemp');
 var weatherDescription=document.getElementById('weatherDescription')
-console.log(weatherDescription.value)
+var weatherIcon=document.getElementById('weatherIcon')
 
 function getTemp()
 {
@@ -19,7 +19,37 @@ function getTemp()
   minTemp.innerHTML=data.main.temp_min;
   maxTemp.innerHTML=data.main.temp_max;
   weatherDescription.innerHTML=data.weather[0].description;
+  var icon=data.weather[0].description;
+  console.log(icon);
+  switch(icon)
+  { case 'haze':{
+    weatherIcon.src='haze.png'}
+    break;
+    case 'clear sky':
+    {
+      weatherIcon.src='clearsky.png'
+    }
+    break;
+    case 'overcast clouds':
+    {
+      weatherIcon.src='overcastclouds.png'
+    }
+    break;
+    case 'broken clouds':
+    {
+      weatherIcon.src='brokenclouds.png'
+    }
+    break;
+    default:
+    {
+      weatherIcon.src='default.gif'
+    }
+  }
+
+
+  
 })
+.catch(()=>console.log("OOOPS!!LOCATION NOT FOUND"))
 }
 
 
