@@ -132,3 +132,15 @@ footer {
     font-size: 20px;
     font-weight: bold;
 }
+.unitBtn
+{
+    padding: 0.8rem 0.8rem;
+    background-color: #B0CF00;
+    color: white;
+margin-top: 5px;
+}
+.weatherIcon
+{
+    width: 0.5rem;
+    height: 3rem;
+}
